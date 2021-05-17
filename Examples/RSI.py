@@ -5,8 +5,7 @@ import pyupbit
 import pandas
 import time
 
-def rsi(ohlc: pandas.DataFrame, period = 14):
-    ohlc["close"] = ohlc["close"]
+def rsi(ohlc: pandas.DataFrame, period: int = 14):
     delta = ohlc["close"].diff()
     gains, declines = delta.copy(), delta.copy()
     gains[gains<0] = 0
