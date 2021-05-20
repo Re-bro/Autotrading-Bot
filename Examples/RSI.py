@@ -20,7 +20,7 @@ def rsi(ohlc: pandas.DataFrame, period: int = 14):
     return pandas.Series(100 - (100/(1 + RS)), name = "RSI")  
 
 
-while True:
+while False: # 사용시 True
     data = pyupbit.get_ohlcv(ticker="KRW-XRP", interval="minute5")
     now_rsi = rsi(data, 14).iloc[-1]
     print(datetime.datetime.now(), now_rsi)

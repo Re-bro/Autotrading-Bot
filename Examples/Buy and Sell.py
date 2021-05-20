@@ -38,7 +38,7 @@ def sell(coin):
 
 
 # RSI에 따른 매매 작업
-while(1):
+while(False): # 사용시 True로
     for i in range(len(coinlist)):
         data = pyupbit.get_ohlcv(ticker=coinlist[i], interval="minute3")
         now_rsi = rsi(data, 14).iloc[-1]

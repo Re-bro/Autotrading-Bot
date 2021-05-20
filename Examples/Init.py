@@ -13,7 +13,7 @@ secret = "USER SECRET KEY"
 upbit = pyupbit.Upbit(access, secret)
 
 # 이용할 코인 리스트
-coinlist = ["KRW-XRP", "KRW-BTC", "KRW-ETH", "KRW-ETC", "KRW-BCH"]
+coinlist = [] # Coin ticker 추가
 coinnum = {}
 lower28 = []
 higher70 = []
