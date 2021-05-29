@@ -8,7 +8,7 @@ from apikey import upbit
 def buy(coin):
     money = upbit.get_balance("KRW")
     if money < 15000 :
-        res = upbit.buy_market_order(coin, money)
+        res = upbit.buy_market_order(coin, money-10)
     elif money < 50000 :
         res = upbit.buy_market_order(coin, 10000)
     elif money < 100000 :
